@@ -310,11 +310,11 @@ $(document).ready(() => {
     if (result.loss < 1) {
       lossMsg = 'This is a perfect result.';
     } else if (result.loss < 5) {
-      lossMsg = 'The is close enough.';
+      lossMsg = 'This is a good result.';
     } else if (result.loss < 15) {
-      lossMsg = 'The color is somewhat off. Consider running it again.';
+      lossMsg = 'This a poor result. Consider running the computation again.';
     } else {
-      lossMsg = 'The color is extremely off. Run it again!';
+      lossMsg = 'This is a very poor result. Try running the computation again.';
     }
 
     $('.realPixel').css('background-color', color.toString());
