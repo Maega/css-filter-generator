@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - CSS filter generator to convert from black to target hex colour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <table>
+        <tr>
+            <td>
+
+                <h1>CSS Filter Generator</h1>
+                <p>
+                    Created by Nebula Software<br>
+                    Credit goes to <a href="https://stackoverflow.com/a/43960991/604861" target="_blank">MultiplyByZer0 for their post on StackOverflow</a>
+                </p>
+
+                <fieldset>
+                    <p>
+                        <label>Target hex colour: </label>
+                        <input class="target" type="text" value="#7f00ff" />
+                    </p>
+                    <button class="execute">Compute Filter</button>
+                </fieldset>
+
+                <div style="display: flex; justify-content: space-around; margin: 40px 0;">
+
+                    <div style="margin-right: 50px">
+                        <h2>Original Image</h2>
+                        <img id="originalImg" src="samplelogo.png">
+                    </div>
+                    
+                    <div style="margin-left: 50px">
+                        <h2>Filtered Image</h2>
+                        <img id="filterImg" src="samplelogo.png">
+                    </div>
+                    
+                </div>
+
+                <div style="margin-bottom: 50px">
+                    <h3>Intended Hex Colour / Result Filter Colour (side by side):</h3>
+                    <div class="pixel realPixel"></div>
+                    <div class="pixel filterPixel"></div>
+                </div>
+
+                <p class="filterDetail">Enter a hex colour code and click <i>"Compute Filter"</i> to generate a CSS filter</p>
+                <p class="lossDetail"></p>
+            </td>
+        </tr>
+    </table>
+    <!-- partial -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
